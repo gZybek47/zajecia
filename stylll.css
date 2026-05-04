@@ -228,6 +228,7 @@ header img{
      .siatka-mala {
         grid-template-columns: 1fr 1fr; 
     }
+}
 
 @media (max-width: 800px) {
     
@@ -255,4 +256,3 @@ header img{
 }
 
 
-}
