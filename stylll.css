@@ -162,31 +162,6 @@ header img{
     margin-top: auto;
 }
 
-@media (max-width: 800px) {
-    
-    .kontener-glowny {
-        flex-direction: column;
-    }
-
-    .lewy-pasek {
-        width: 100%;
-        border-right: none;
-        border-bottom: 1px solid #3d312a;
-        display: flex;
-        justify-content: space-around;
-        padding: 10px 0;
-        box-sizing: border-box;
-    }
-    
-    .lewy-pasek a {
-        margin-bottom: 0;
-    }
-
-    .siatka-mala {
-        grid-template-columns: 1fr;
-    }
-}
-
 @media (max-width: 1300px) {
     
     .ikona-hamburgera {
@@ -253,4 +228,31 @@ header img{
      .siatka-mala {
         grid-template-columns: 1fr 1fr; 
     }
+
+@media (max-width: 800px) {
+    
+    .kontener-glowny {
+        flex-direction: column;
+    }
+
+    .lewy-pasek {
+        width: 100%;
+        border-right: none;
+        border-bottom: 1px solid #3d312a;
+        display: flex;
+        justify-content: space-around;
+        padding: 10px 0;
+        box-sizing: border-box;
+    }
+    
+    .lewy-pasek a {
+        margin-bottom: 0;
+    }
+
+    .siatka-mala {
+        grid-template-columns: 1fr;
+    }
+}
+
+
 }
