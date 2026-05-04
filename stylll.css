@@ -1,0 +1,256 @@
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #19C3F7;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+
+}
+header img{
+    display: block;
+    width: 100%;
+    max-height: 250px;
+    object-fit: cover;
+}
+
+.naglowek-strony {
+    background-color: #9AC6FA;
+    padding: 25px 20px;
+    text-align: center;
+    border-bottom: 3px solid #4319F7;
+    position: relative;
+}
+
+.naglowek-strony h1 {
+    color: #e6a817;
+    margin: 0;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.ukryty-checkbox {
+    display: none;
+}
+
+.ikona-hamburgera {
+    display: none;
+}
+
+.menu-glowne {
+    background-color: #9AC6FA;
+    padding: 0px;
+    text-align: center;
+    border-bottom: 1px solid #4319F7;
+}
+
+.menu-glowne a {
+    color: #FAF8F2;
+    text-decoration: none;
+    margin: 0 20px;
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+.menu-glowne a.aktywny {
+    color: #e6a817;
+    text-decoration: underline;
+    text-decoration-color: #4319F7;
+    text-underline-offset: 4px;
+}
+
+.kontener-glowny {
+    display: flex;
+    flex: 1;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.lewy-pasek {
+    width: 200px;
+    padding: 20px;
+    border-right: 1px solid #3d312a;
+}
+
+.lewy-pasek a {
+    display: block;
+    color: #e6a817;
+    text-decoration: underline;
+    text-decoration-color: #4319F7;
+    text-underline-offset: 4px;
+    margin-bottom: 12px;
+    font-weight: bold;
+}
+
+.miejsce-na-produkty {
+    flex: 1;
+    padding: 20px;
+}
+
+.siatka-mala {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 15px;
+    padding: 10px;
+}
+
+.karta-produktu {
+    background: #9AC6FA;
+    padding: 10px;
+    border: 3px solid #4319F7;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.karta-produktu img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    display: block;
+    border-radius: 4px;
+}
+
+.karta-produktu h3 {
+    color: #fefae0;
+    margin: 10px 0 6px 0;
+}
+
+.strona-wypieki {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    flex: 1;
+}
+
+.tekst-powitalny {
+    text-align: center;
+    color: #FAF8F2;
+    margin-bottom: 40px;
+}
+
+.siatka-duza {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 30px;
+    padding: 15px;
+}
+
+.karta-duza {
+    background-color: #9AC6FA;
+    border: 3px solid #4319F7;
+    border-radius: 8px;
+    overflow: hidden;
+    text-align: center;
+}
+
+.karta-duza img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-bottom: 2px solid #4319F7;
+}
+
+.stopka-dolna {
+    background-color: #9AC6FA;
+    text-align: center;
+    padding: 15px;
+    color: #555;
+    border-top: 2px solid #4319F7;
+    margin-top: auto;
+}
+
+@media (max-width: 800px) {
+    
+    .kontener-glowny {
+        flex-direction: column;
+    }
+
+    .lewy-pasek {
+        width: 100%;
+        border-right: none;
+        border-bottom: 1px solid #3d312a;
+        display: flex;
+        justify-content: space-around;
+        padding: 10px 0;
+        box-sizing: border-box;
+    }
+    
+    .lewy-pasek a {
+        margin-bottom: 0;
+    }
+
+    .siatka-mala {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 1300px) {
+    
+    .ikona-hamburgera {
+        display: block;
+        position: fixed;
+        top: 20px;
+        right: 2px;
+        font-size: 2rem;
+        color: #4319F7;
+        cursor: pointer;
+        z-index: 1;
+    }
+    
+    .ikona-hamburgera::before {
+        content: "☰";
+    }
+    .ukryty-checkbox:checked + .ikona-hamburgera::before {
+        content: "☰";
+        color: #e6a817; 
+    }
+
+    .menu-glowne {
+        position: fixed;
+        top: 0;
+        right: -270px; 
+        width: 250px;
+        height: 100%;
+        background-color: #9AC6FA;
+        display: flex;
+        flex-direction: column;
+        padding-top: 80px;
+        transition: right 0.4s ease-in-out;
+        border-left: 3px solid #4319F7;
+        border-bottom: none;
+        box-shadow: -5px 0 15px rgba(0,0,0,0.3);
+    }
+    
+    .ukryty-checkbox:checked ~ .menu-glowne {
+        right: 0; 
+    }
+
+    .menu-glowne a {
+        margin: 15px 0;
+        display: block;
+    }
+    
+    .kontener-glowny {
+        flex-direction: column;
+    }
+
+    .lewy-pasek {
+        width: 100%;
+        border-right: none;
+        border-bottom: 1px solid #3d312a;
+        display: flex;
+        justify-content: space-around;
+        padding: 10px 0;
+        box-sizing: border-box;
+    }
+    
+    .lewy-pasek a {
+        margin-bottom: 0;
+    }
+     .siatka-mala {
+        grid-template-columns: 1fr 1fr; 
+    }
+}
